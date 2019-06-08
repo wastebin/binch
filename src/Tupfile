@@ -1,0 +1,5 @@
+include_rules
+
+: foreach *.c |> !cc |> {objs}
+
+: {objs} |> !ld |> $(PROJ_ROOT)/dist/binch
